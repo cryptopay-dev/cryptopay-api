@@ -72,7 +72,7 @@ Calls that return paginated data are marked with "P" in the call description tit
 
 ### HTTP response header
 
-Calls that return paginated collections will add a `Pagination` HTT header to the response. It will contain a pagination meta-data JSON object.
+Calls that return paginated collections will add a `Pagination` HTTP header to the response. It will contain a pagination meta-data JSON object.
 
 **Pagination header example**
 ```javascript
@@ -135,7 +135,9 @@ This call will return the balances in all currencies.
 
 **Request parameters**
  
-_None_
+| Name                | Type    | Description                                                                  |
+|---------------------|---------|------------------------------------------------------------------------------|
+| api_key             | String  | Your cryptopay api key                                                       |
 
 **Response**
 
@@ -172,6 +174,7 @@ This call creates an invoice
 
 | Name                | Type    | Description                                                                  |
 |---------------------|---------|------------------------------------------------------------------------------|
+| api_key             | String  | Your cryptopay api key                                                       |
 | price               | Decimal | Requested amount to be credited upon payment                                 |
 | currency            | String  | Currency in which the amount is expressed, default is EUR  _(optional)_      |
 | description         | String  | Invoice description _(optional)_                                             |
@@ -260,9 +263,10 @@ It is the same call as the above one, except this call will return a subset of t
 
 **Request parameters**
 
-| Name | Type | Description      |
-|------|------|------------------|
-| uuid | UUID | Quote identifier |
+| Name 		| Type 	  | Description      	   |
+|---------------|---------|------------------------|
+| api_key       | String  | Your cryptopay api key |
+| uuid 		| UUID    | Quote identifier       |
 
 
 **Response**
@@ -321,7 +325,7 @@ Name                | Type     | Description                                    
 ```
 
 
-### Requote an invoice
+### Requote an invoice (?)
 
 Cryptopay's invoice is valid for 10 minutes and will expire after that. This call is used to requote this invoice — create a new invoice with exactly the same parameters.
 
@@ -401,7 +405,9 @@ This call will return a paginated list of invoices for the client account.
 
 **Request parameters**
 
-_None_
+| Name 		| Type 	  | Description      	   |
+|---------------|---------|------------------------|
+| api_key       | String  | Your cryptopay api key |
 
 **Response**
 
