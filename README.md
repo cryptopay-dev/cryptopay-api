@@ -182,7 +182,7 @@ This call creates an invoice
 | callback\_url       | String  | URL to which a callback should be made when the invoice is paid _(optional)_ |
 | success\_redirect\_url       | String  | URL to redirect customer after payment completes  _(optional)_      |
 | confirmations_count | Decimal | Manually require number of confirmations _(optional)_ |
-| callback_params     | Hash    | Additional parameters to include in callback |
+| callback_params     | Hash    | Additional parameters to include in callback _(optional)_ |
 **Response**
 
 An invoice JSON object is returned.
@@ -325,7 +325,7 @@ Name                | Type     | Description                                    
 ```
 
 
-### Requote an invoice (?)
+### Requote an invoice (A)
 
 Cryptopay's invoice is valid for 10 minutes and will expire after that. This call is used to requote this invoice — create a new invoice with exactly the same parameters.
 
