@@ -338,6 +338,7 @@ Cryptopay's invoice is valid for 10 minutes and will expire after that. This cal
 
 | Name | Type | Description      |
 |------|------|------------------|
+| api_key| String  | Your cryptopay api key|
 | uuid | UUID | Quote identifier |
 
 
