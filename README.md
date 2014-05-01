@@ -182,7 +182,7 @@ This call creates an invoice
 | callback\_url       | String  | URL to which a callback should be made when the invoice is paid _(optional)_ |
 | success\_redirect\_url       | String  | URL to redirect customer after payment completes  _(optional)_      |
 | confirmations_count | Decimal | Manually require number of confirmations _(optional)_ |
-| callback_params     | Hash    | Additional parameters to include in callback |
+| callback_params     | Hash    | Additional parameters to include in callback _(optional)_ |
 **Response**
 
 An invoice JSON object is returned.
@@ -325,7 +325,7 @@ Name                | Type     | Description                                    
 ```
 
 
-### Requote an invoice (?)
+### Requote an invoice (A)
 
 Cryptopay's invoice is valid for 10 minutes and will expire after that. This call is used to requote this invoice — create a new invoice with exactly the same parameters.
 
@@ -338,6 +338,7 @@ Cryptopay's invoice is valid for 10 minutes and will expire after that. This cal
 
 | Name | Type | Description      |
 |------|------|------------------|
+| api_key| String  | Your cryptopay api key|
 | uuid | UUID | Quote identifier |
 
 
@@ -582,7 +583,7 @@ This call creates a hosted page token
 |----------------------|---------|------------------------------------------------------------------------------|
 | name                 | String  | Currency in which the amount is expressed                                    |
 | price                | Decimal | Price                                                                        |
-| quantity             | Integer | Set the quantity per checkout (if change_quantity set to true)               |
+| quantity             | Decimal | Set the quantity per checkout (if change_quantity set to true)               |
 | description          | String  | Description of an item _(optional)_  |
 | vat\_rate            | Decimal | Vat rate    _(optional)_                                               |
 
@@ -602,7 +603,7 @@ An invoice JSON object is returned.
    "collect_address":true,
    "success_redirect_url":"http://example.com/success.html",
    "callback_url":"http://requestb.in/13lffoc1",
-   "form":"Date of Birth:",
+   "form":["Date of Birth:"],
    "items":[
       {
          "name":"Test item 1",
