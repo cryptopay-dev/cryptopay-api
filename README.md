@@ -583,7 +583,7 @@ This call creates a hosted page token
 |----------------------|---------|------------------------------------------------------------------------------|
 | name                 | String  | Currency in which the amount is expressed                                    |
 | price                | Decimal | Price                                                                        |
-| quantity             | Integer | Set the quantity per checkout (if change_quantity set to true)               |
+| quantity             | Decimal | Set the quantity per checkout (if change_quantity set to true)               |
 | description          | String  | Description of an item _(optional)_  |
 | vat\_rate            | Decimal | Vat rate    _(optional)_                                               |
 
@@ -603,7 +603,7 @@ An invoice JSON object is returned.
    "collect_address":true,
    "success_redirect_url":"http://example.com/success.html",
    "callback_url":"http://requestb.in/13lffoc1",
-   "form":"Date of Birth:",
+   "form":["Date of Birth:"],
    "items":[
       {
          "name":"Test item 1",
