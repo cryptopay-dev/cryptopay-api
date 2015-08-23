@@ -1,5 +1,3 @@
-![Cryptopay Logo](https://cryptopay.me/assets/logo-main.png)
-
 This document describes the API calls available as part of the Cryptopay Payment Gateway v1 API.
 
 If your language of choice is Ruby we recommend using the [Cryptopay gem](https://github.com/cryptopay-dev/cryptopay-ruby) instead of writing your own client.
