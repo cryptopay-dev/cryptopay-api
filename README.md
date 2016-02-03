@@ -875,7 +875,7 @@ header('HTTP/1.1 200 OK');
 
 A `validation_hash` parameter is added to all callback requests. Its purpose is to authenticate the call from Cryptopay to the callback URL. This signature **must** be properly checked by the receiving server in order to ensure that the request is legitimate and hasn't been tampered with.
 
-The signature is computed by concatenating the Merchant API Key with an invoice UUID, price in cents (multiply of callback `price` by 100) and currency ISO code and applying a SHA1 hash function to it. You must use the following pattern: "#{merchant.api\_key}\_#{uuid}\_#{price\_cents}#{price_currency}"
+The signature is computed by concatenating the Merchant API Key with an invoice UUID, price in cents (multiply of callback `price` by 100) and currency ISO code and applying a SHA1 hash function to it. You must use the following pattern: "#{merchant.api\_key}\_#{uuid}\_#{price\_cents}#{currency}"
 
 **Example signed callback request :**
 
